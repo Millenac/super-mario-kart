@@ -1,0 +1,170 @@
+@font-face {
+    font-family: 'super-mario-kart';
+    src: url('../font/super-mario-kart.ttf') format(truetype);
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('../img/background.png');
+    background-size: cover;
+    background-position: center;
+}
+body::before{
+    content: "";
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    backdrop-filter: blur(8px);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+h2 {
+    font-family: 'super-mario-kart';
+    color: #000;
+}
+.topo-imagem {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 10px auto 40px auto;
+}
+
+.super-mario-kart {
+    display: flex;
+    gap: 30px;
+    padding: -5px 0;
+
+}
+.cartao-super-mario{
+    display: none;
+    max-width: 360px;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.cartao-super-mario.aberto{
+    display: block;
+}
+.cartao-super-mario img {
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+}
+
+.cartao-super-mario .cartao-topo{
+    padding: 30px 40px 0;
+}
+.cartao-super-mario .nome{
+    margin-bottom: 5px;
+}
+.cartao-super-mario .tipo{
+    background-color: #ffffffd8;
+    font-family: 'super-mario-kart';
+    font-size: 14px;
+    opacity: 0.8;
+    border-radius: 10px;
+    padding: 2px 10px;
+}
+.cartao-super-mario .detalhes{
+    color: #0c0c0c;
+    font-family: 'super-mario-kart';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cartao-super-mario .cartao-informacoes{
+    background-color: #a8fa82be;
+    display: flex;
+    justify-content: space-between;
+    padding: 90px 20px 50px;
+    margin-top: -70px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.cartao-super-mario .cartao-informacoes h3{
+    font-size: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #0f0f0f;
+    text-align: center;
+
+}
+.cartao-super-mario .cartao-informacoes .descricao {
+    padding: 0 10px;
+    font-size: 12px;
+    max-height: 150px;
+    overflow-y: scroll;
+}
+
+.cartao-super-mario .cartao-informacoes .descricao::-webkit-scrollbar {
+    width: 8px;
+}
+
+.cartao-super-mario .cartao-informacoes .descricao::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 15px;
+}
+
+.cartao-super-mario .cartao-informacoes .descricao::-webkit-scrollbar-track {
+    background-color: #5fb34677;
+    border-radius: 10px;
+}
+
+.listagem {
+    max-width: 300px;
+    display: flex;
+}
+
+.posicao-1{
+    order: 1;
+}
+
+.posicao-2 {
+    order: 2;
+}
+
+.posicao-3{
+    order: 3;
+}
+
+.listagem .super-mario img {
+    width: 30%;
+
+}
+.listagem .super-mario{
+    background-color: #6b727a41;
+    color: #000000;
+
+    display: flex;
+
+    align-items: center;
+    padding: 0  5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    min-height: 60px;
+
+    transition: 0.15 ease-in-out;
+}
+
+.listagem .super-mario:hover{
+    transform: scale(1.05);
+}
+.listagem .super-mario span{
+    padding-right: 20px;
+
+}
+.listagem .super-mario.ativo{
+    background-color: #5fc54bc5;
+}
